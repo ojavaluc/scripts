@@ -1,0 +1,357 @@
+/* Resetando margens e preenchimentos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d0e7d7e0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #144ce7;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do menu lateral */
+#menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #085fc2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 9999;
+    border-radius: 0 10px 10px 0;
+}
+
+#menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #34495e;
+}
+
+#menu a:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+/* Estilo do botão de fechar o menu dentro do menu lateral */
+#closeMenu {
+    color: white;
+    font-size: 30px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Estilo do botão de menu */
+#menuToggle {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo das mensagens */
+.mensagem {
+    background-color: #ffffffd2;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nas mensagens */
+.mensagem:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem h3 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+    color: #007BFF;
+    font-weight: 600;
+}
+
+.mensagem p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilo para a mensagem destacada */
+.mensagem.highlight {
+    background-color: #a9c4db;
+    border-left: 5px solid #007BFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do botão de copiar mensagem */
+.copy-btn {
+    padding: 10px 15px;
+    background-color: #b94e07;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.copy-btn:active {
+    transform: scale(1);
+}
+
+/* Estilo do botão */
+button {
+    padding: 12px 20px;
+    background-color: #b30f17;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Estilo para a navegação lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Estilo das regras de atendimento */
+#regras {
+    background-color: #b0b3b8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#regras h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-weight: 600;
+}
+
+#regras p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+#regras strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .mensagem h3 {
+        font-size: 1.5rem;
+    }
+
+    .mensagem p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste no botão de menu lateral */
+    #menuToggle {
+        font-size: 25px;
+    }
+
+    /* Ajuste no menu lateral */
+    #menu {
+        width: 0;
+    }
+
+    .sidebar {
+        padding-top: 40px;
+    }
+}
+.quiz-container {
+    background-color: #93abc2;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    text-align: center; /* Centraliza tudo */
+    max-width: 600px; /* Define largura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz-container h3 {
+    font-size: 1.8rem;
+    color: #161515;
+}
+
+.quiz-question {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: left; /* Deixa as perguntas alinhadas à esquerda */
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultadoQuiz {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Ocultar inicialmente */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+.img-container {
+    text-align: center;
+  }
+  
+  .img-container img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.link-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.link-center a button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #005bb5;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.link-center a button:hover {
+    background-color: #003d82;
+}
+
+  
